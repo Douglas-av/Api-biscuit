@@ -1,5 +1,7 @@
+from pydantic import BaseModel
 
-
-class Biscuit():
-    def __init__():
-        ...
+class Biscuit(BaseModel):
+    id: int
+    descricao: str
+    preco: float
+    imagem: str
