@@ -8,6 +8,8 @@ from src.services.db import lista_biscuits
 @spec.validate(query=QueryBiscuit, resp=Response(HTTP_200=Biscuits))
 def retornar_biscuits():
     """Retorna todos os Biscuits cadastrados no banco de dados"""
+    # query = request.context.query.dict(exclude_none=True)
+    # breakpoint()
     return make_response(
         jsonify(
             Biscuits(
